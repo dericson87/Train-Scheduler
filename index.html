@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Scheduler</title>
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body onload="startTime()">
+<div class="jumbotron" style= "background-image: url(./assets/images/tron.jpg); background-size: cover; background-repeat:no-repeat; background-position:center;">
+	<h1 style="color: white; font-family: 'Monoton', cursive; font-size:80px;">Virtual Train Station</h1>
+	<div id="clockdate" class="container">
+		<div class="clockdate-wrapper">
+			<div id="clock"></div>
+			<div id="date"></div>
+		</div>
+	</div>
+	
+<div class="container" id="main-content">
+	<div class="col-lg-12">
+			<h2 id="font">Current Schedule</h2>
+			<table id="Schedule" class="table table-striped table-bordered" cellspacing="0" width="100%">
+				<thead>
+					<tr style="text-align:center;">
+						<th>Train Name</th>
+						<th>Destination</th>
+						<th>Frequency (in minutes)</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+	</div>
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<h2 id="font">Train Submission Form</h2>
+			<div class="panel-body">
+				<form role="form" >
+					<div class="form-group">
+					  <label for="train-input">Train Name</label>
+					  <input class="form-control" id="train-input" type="text" style="color:white; font-family: 'Share Tech Mono', monospace;">
+					</div>
+					<div class="form-group">
+					  <label for="destination-input">Destination</label>
+					  <input class="form-control" id="destination-input" type="text" style="color:white; font-family: 'Share Tech Mono', monospace;">
+					</div>
+					<div class="form-group">
+					  <label for="time-input">First Train Time (HH:mm - military time)</label>
+					  <input class="form-control" id="time-input" type="text" style="color:white; font-family: 'Share Tech Mono', monospace;">
+					</div>
+					<div class="form-group">
+					  <label for="frequency-input">Frequency (in minutes)</label>
+					  <input class="form-control" id="frequency-input" type="text" style="color:white; font-family: 'Share Tech Mono', monospace;">
+					</div>
+				</form>
+			</div>
+				<div class = "text-center">
+				<button class="btn btn-default" id="add-train" type="submit" style="color: white; font-family: 'Share Tech Mono', monospace; font-size: 50px;">Submit</button>
+				</div>
+		</div>
+	</div>
+</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+	<script src="assets/javascript/main.js"></script>
+</body>
+</html>

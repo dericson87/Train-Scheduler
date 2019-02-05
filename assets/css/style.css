@@ -1,0 +1,48 @@
+label, th {
+    font-size:20px;
+  }
+  html, body {
+    height: 100%;
+  }
+th, tr, p, label {
+    font-family: 'Share Tech Mono', monospace;
+    color:#daf6ff;
+  }
+ .clockdate-wrapper, #font {
+    font-family: 'Share Tech Mono', monospace;
+    color:white;
+  }
+.clockdate-wrapper, th, label, h1, h2, button {
+    text-shadow:
+          0 0 5px #fff,
+          0 0 10px #fff,
+          0 0 20px #fff,
+          0 0 40px #0ff,
+          0 0 80px #0ff,
+          0 0 90px #0ff,
+          0 0 100px #0ff,
+          0 0 150px #0ff;
+    text-align:center;
+}
+input {
+   background-color:transparent !important;
+}
+.clockdate {
+    position: center;
+}
+#main-content {
+    margin-top:30px;
+}
+.clockdate-wrapper {
+    letter-spacing: 7px;
+} 
+#clock {
+    font-size: 60px;
+}
+#date {
+    font-size: 50px;
+}
+  
+  
+
+  
